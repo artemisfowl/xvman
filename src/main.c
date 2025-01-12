@@ -5,6 +5,25 @@
 #include <stdio.h>
 #include <string.h>
 
+/**
+ * @brief Structure for containing the CLI options.
+ *
+ * This structure instance can be used in order to specify the CLI options that
+ * need to be parsed.
+ *
+ * @param sname - string containing the short name of the option.
+ * @param lname - string containing the long name of the corresponding option,
+ * can be empty as well. If it is empty, set it to NULL.
+ * @param values - string which will be containing all the values provided in
+ * the CLI argument.
+ * @param has_args - boolean, set this value to true in order to specify if the
+ * option would have arguments.
+ * @param is_present - boolean, this value will be set to true if the CLI
+ * option is specified. This will be updated during parsing, so set this to
+ * false at the time of initialization.
+ * @param argvalc - unsigned integer, specify the number of arguments that
+ * needs to be present for the corresponding option.
+ */
 typedef struct {
 	char sname[PATH_MAX];
 	char lname[PATH_MAX];
